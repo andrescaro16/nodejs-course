@@ -2,7 +2,7 @@ const { createReadStream } = require("fs");
 
 const stream = createReadStream("./bigFile.txt", {
   highWaterMark: 90000,
-  encoding: "utf8"
+  encoding: "utf-8"
 });
 
 stream.on("data", (chunk) => {

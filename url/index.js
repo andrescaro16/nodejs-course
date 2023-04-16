@@ -1,5 +1,7 @@
-const http = require('http');
-const url = require('url');
+import http from "http";
+import url from "url";
+//const http = require('http');
+//const url = require('url');
 
 const server = http.createServer((req, res) => {
   console.log(url);

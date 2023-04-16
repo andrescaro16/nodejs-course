@@ -2,7 +2,7 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer(async (req, res) => {
-  const fileStream = fs.createReadStream("./bigFile.txt", { encoding: "utf8" });
+  const fileStream = fs.createReadStream("./bigFile.txt", { encoding: "utf-8" });
   fileStream.on("open", (chunk) => {
     fileStream.pipe(res);
   });

@@ -1,14 +1,14 @@
 const PI = 3.14;
 
-function add(x, y) {
+export function add(x, y) {
   return x + y;
 }
 
-function substract(x, y) {
+export function substract(x, y) {
   return x - y;
 }
 
-function division(x, y) {
+export function division(x, y) {
   if (y == 0) {
     showMessage("You cannot divide by 0");
   } else {
@@ -16,20 +16,30 @@ function division(x, y) {
   }
 }
 
-function multiply(x, y) {
+export function multiply(x, y) {
   return x * y;
 }
 
-function showMessage(message) {
+export function showMessage(message) {
   console.log(message);
 }
 
-console.log(module)
-
-exports.add = add;
-exports.substract = substract;
-exports.division = division;
-exports.multiply = multiply;
+//console.log(module)
 
 
-console.log(module)
+export default {
+  add,
+  substract,
+  division,
+  multiply,
+  showMessage,
+}
+
+
+// exports.add = add;
+// exports.substract = substract;
+// exports.division = division;
+// exports.multiply = multiply;
+
+
+//console.log(module)
